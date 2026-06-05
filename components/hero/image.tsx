@@ -13,7 +13,7 @@ export default function CenterImage() {
   return (
     <MotionDiv
       initial={animate ? { opacity: 0, y: 10 } : undefined}
-      animate={animate ? { opacity: 1, y: 1 } : undefined}
+      animate={animate ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="relative z-20 mt-16 flex w-full max-w-2xl justify-center xl:absolute xl:bottom-0 xl:left-1/2 xl:mt-0 xl:-translate-x-1/2"
     >
