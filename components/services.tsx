@@ -6,22 +6,22 @@ const services = [
   {
     icon: Layout,
     title: 'Frontend Development',
-    desc: 'Modern, responsive UI using Next.js, React, and Tailwind CSS with pixel-perfect execution.',
+    desc: 'I build responsive user interfaces using Next.js, React, and Tailwind CSS, turning designs into working and usable websites.',
   },
   {
     icon: Code2,
     title: 'Full Stack Development',
-    desc: 'End-to-end web apps with APIs, authentication, and database integration.',
+    desc: 'I build full stack applications with APIs, authentication, and database integration when needed.',
   },
   {
     icon: Rocket,
     title: 'SaaS / Web Apps',
-    desc: 'Scalable SaaS platforms with clean architecture and optimized performance.',
+    desc: 'I develop web apps with a simple and maintainable structure, focused on usability and performance.',
   },
   {
     icon: Gauge,
     title: 'Performance Optimization',
-    desc: 'Improving speed, SEO, and Core Web Vitals for production-ready applications.',
+    desc: 'I improve load speed, responsiveness, and overall user experience of existing projects.',
   },
 ];
 
@@ -45,8 +45,10 @@ export default function Services() {
           <h3 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
             What I Can Do
           </h3>
-          <p className="mt-4 text-white/50">
-            Clean, scalable, and modern solutions built for performance.
+          <p className="mx-auto mt-4 max-w-2xl text-white/50">
+            I build websites and web apps that are fast, responsive, and easy to
+            maintain. I focus on clean code and making sure everything works
+            well across different devices.
           </p>
         </div>
 

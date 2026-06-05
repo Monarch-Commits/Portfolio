@@ -60,23 +60,24 @@ export default function DeveloperStory() {
             </p>
 
             <h2 className="text-3xl leading-tight font-semibold md:text-5xl">
-              Building Modern
+              Building for the
               <br />
-              <span className="text-primary">Digital Experiences</span>
+              <span className="text-primary">modern web</span>
             </h2>
           </div>
 
           <p className="text-sm leading-relaxed text-gray-300 md:text-base">
-            Im a frontend-focused web developer passionate about creating clean,
-            responsive, and high-performing websites. I enjoy transforming ideas
-            into engaging digital experiences that combine aesthetics with
-            functionality.
+            I’m a web developer working on both frontend and backend, but I
+            focus more on frontend development. I build clean, responsive, and
+            easy-to-use websites with attention to performance and usability. I
+            care about how interfaces feel when used, not just how they look.
           </p>
 
           <p className="text-sm leading-relaxed text-gray-400 md:text-base">
-            Using technologies like Next.js, React, Tailwind CSS, and Framer
-            Motion, I build interfaces that not only look modern but also
-            deliver smooth user experiences across all devices.
+            I mainly work with Next.js, React, and TypeScript. For styling, I
+            use Tailwind CSS, and I use Framer Motion for simple animations when
+            needed. On the backend, I work with PostgreSQL using Prisma for
+            database management, and Kinde for authentication.
           </p>
 
           <div className="w-full pt-8">

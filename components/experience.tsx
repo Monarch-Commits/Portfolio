@@ -48,7 +48,8 @@ export default function ExperienceSection() {
             Experience
           </h2>
           <p className="mt-3 text-white/60">
-            Real-world work, systems built, and technical support experience.
+            Work on real projects, building systems and handling technical tasks
+            when needed.
           </p>
         </div>
 

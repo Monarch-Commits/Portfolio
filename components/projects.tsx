@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { Plus, Code, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+import { AlertDialogBasic } from './ui/button/dialogbutton';
 
 const projects = [
   {
@@ -111,37 +112,29 @@ export default function FeaturedProject() {
                 </div>
 
                 {/* RIGHT BUTTONS */}
-                <div className="flex gap-2">
-                  <a
-                    href={project.live}
-                    className="flex items-center justify-center gap-2 border border-white/20 bg-white/5 px-3 py-2 text-xs text-white transition hover:bg-white/10"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    Live
-                  </a>
+                <div className="flex w-full items-center justify-between gap-4">
+                  <div className="flex gap-2">
+                    <a
+                      href={project.live}
+                      className="flex items-center justify-center gap-2 border border-white/20 bg-white/5 px-3 py-2 text-xs text-white transition hover:bg-white/10"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      Live
+                    </a>
 
-                  <a
-                    href={project.code}
-                    className="flex items-center justify-center gap-2 border border-white/20 bg-white/5 px-3 py-2 text-xs text-white transition hover:bg-white/10"
-                  >
-                    <Code className="h-3.5 w-3.5" />
-                    Code
-                  </a>
+                    <a
+                      href={project.code}
+                      className="flex items-center justify-center gap-2 border border-white/20 bg-white/70 px-3 py-2 text-xs text-black transition hover:bg-white/10"
+                    >
+                      <Code className="h-3.5 w-3.5" />
+                      Code
+                    </a>
+                  </div>
+                  <AlertDialogBasic title={project.title} desc={project.desc} />
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-12 flex justify-center">
-          <button className="relative border border-white/20 bg-white/5 px-8 py-3 text-sm text-white backdrop-blur-md transition hover:bg-white/10">
-            <Plus className="absolute -top-2 -left-2 h-4 w-4 text-white" />
-            <Plus className="absolute -top-2 -right-2 h-4 w-4 text-white" />
-            <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />
-            <Plus className="absolute -right-2 -bottom-2 h-4 w-4 text-white" />
-            View All Projects
-          </button>
         </div>
       </div>
     </section>

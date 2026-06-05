@@ -10,7 +10,6 @@ export default function Contact() {
       id="contact"
       className="bg-background relative border-y border-white/10 py-24 text-white"
     >
-      {' '}
       <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />
       <Plus className="absolute -right-2 -bottom-2 h-4 w-4 text-white" />
       <div className="relative mx-auto max-w-5xl px-6">
@@ -20,10 +19,10 @@ export default function Contact() {
             Contact
           </h2>
           <h3 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            Let’s Build Something
+            Let’s work together
           </h3>
           <p className="mt-4 text-white/50">
-            Have a project in mind? Let’s work together and make it happen.
+            Have a project in mind? I’m open to freelance or collaboration work.
           </p>
         </div>
 
@@ -56,7 +55,7 @@ export default function Contact() {
           </div>
 
           {/* Right: Form */}
-          <div className="border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+          <div className="border border-white/10 bg-white/5 px-4 py-8 backdrop-blur-xl lg:px-8">
             <form className="space-y-4">
               <input
                 type="text"

@@ -7,7 +7,7 @@ import Services from '@/components/services';
 
 export default function Home() {
   return (
-    <main className="bg-background mx-auto w-full max-w-7xl border-x border-gray-600">
+    <main className="bg-background mx-auto w-full max-w-7xl border-x border-white/10">
       <Hero />
       <FeaturedProject />
       <AboutSection />
