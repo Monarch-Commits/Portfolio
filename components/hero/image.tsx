@@ -6,14 +6,11 @@ import { useMediaQuery } from '../hooks/useMediaQuery';
 
 export default function CenterImage() {
   const isLgUp = useMediaQuery('(min-width: 1024px)');
-  const animate = isLgUp;
-
-  const MotionDiv = animate ? motion.div : 'div';
 
   return (
-    <MotionDiv
-      initial={animate ? { opacity: 0, y: 10 } : undefined}
-      animate={animate ? { opacity: 1, y: 0 } : undefined}
+    <motion.div
+      initial={isLgUp ? { opacity: 0, y: 10 } : undefined}
+      animate={isLgUp ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="relative z-20 mt-16 flex w-full max-w-2xl justify-center xl:absolute xl:bottom-0 xl:left-1/2 xl:mt-0 xl:-translate-x-1/2"
     >
@@ -32,6 +29,6 @@ export default function CenterImage() {
         priority
         className="relative h-auto w-full object-contain"
       />
-    </MotionDiv>
+    </motion.div>
   );
 }

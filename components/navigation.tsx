@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, Plus, X } from 'lucide-react';
 import Image from 'next/image';
 
 const navLinks = [
@@ -37,7 +37,7 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 transition-transform duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-100 transition-transform duration-300 ${
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
@@ -86,7 +86,11 @@ export function Navigation() {
 
         {/* MOBILE MENU */}
         {isOpen && (
-          <div className="border-border/50 bg-card/95 absolute top-16 right-4 left-4 mt-2 border p-4 backdrop-blur-lg lg:hidden">
+          <div className="bg-background absolute top-16 right-4 left-4 z-100 mt-2 border border-white/10 p-4 lg:hidden">
+            <Plus className="absolute -top-2 -left-2 h-4 w-4 text-white" />
+            <Plus className="absolute -top-2 -right-2 h-4 w-4 text-white" />
+            <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />
+            <Plus className="absolute -right-2 -bottom-2 h-4 w-4 text-white" />
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
