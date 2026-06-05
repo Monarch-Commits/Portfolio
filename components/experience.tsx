@@ -14,8 +14,11 @@ const experiences = [
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     links: [
-      { label: 'View Project', href: '#' },
-      { label: 'View Certificate', href: '#' },
+      { label: 'View Project', href: 'https://studentrecording.vercel.app/' },
+      {
+        label: 'View Certificate',
+        href: 'https://drive.google.com/file/d/10w7-9CENdC5l5fpOgAj6tTaTqgj6DUGQ/preview',
+      },
     ],
   },
   {
@@ -30,15 +33,21 @@ const experiences = [
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     links: [
-      { label: 'View Project', href: '#' },
-      { label: 'View Documentation', href: '#' },
+      { label: 'View Project', href: 'https://libraryholding.vercel.app/' },
+      {
+        label: 'View Documentation',
+        href: 'https://drive.google.com/file/d/11FKfn6ILRg7Nry9gOfNd0HCFw-6y6GsK/preview',
+      },
     ],
   },
 ];
 
 export default function ExperienceSection() {
   return (
-    <section className="relative w-full bg-black px-6 py-24 text-white md:px-16">
+    <section
+      id="experience"
+      className="relative w-full bg-black px-6 py-24 text-white md:px-16"
+    >
       <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />
       <Plus className="absolute -right-2 -bottom-2 h-4 w-4 text-white" />
       <div className="mx-auto max-w-5xl">
@@ -109,6 +118,8 @@ export default function ExperienceSection() {
                     <a
                       key={i}
                       href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`group/link flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition ${
                         isPrimary
                           ? 'bg-white text-black hover:bg-gray-200' // Primary Style

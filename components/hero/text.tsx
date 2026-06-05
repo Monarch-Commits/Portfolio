@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import Link from 'next/link';
 
 function AnimatedContent() {
   const MotionDiv = motion.div;
@@ -59,13 +60,19 @@ function AnimatedContent() {
         transition={{ delay: 0.5 }}
         className="mt-8 flex flex-wrap justify-center gap-3 xl:justify-start"
       >
-        <button className="border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/90 transition hover:bg-white/10">
+        <Link
+          href="#project"
+          className="border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/90 transition hover:bg-white/10"
+        >
           View my Work
-        </button>
+        </Link>
 
-        <button className="bg-white/90 px-5 py-2 text-sm font-medium text-black transition hover:bg-gray-400">
+        <Link
+          href="#contact"
+          className="bg-white/90 px-5 py-2 text-sm font-medium text-black transition hover:bg-gray-400"
+        >
           Contact
-        </button>
+        </Link>
       </motion.div>
     </MotionDiv>
   );
@@ -95,13 +102,19 @@ function StaticContent() {
       </div>
 
       <div className="mt-8 flex flex-wrap justify-center gap-3 xl:justify-start">
-        <button className="border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/90 transition hover:bg-white/10">
+        <Link
+          href="#project"
+          className="border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/90 transition hover:bg-white/10"
+        >
           View my Work
-        </button>
+        </Link>
 
-        <button className="bg-white/90 px-5 py-2 text-sm font-medium text-black transition hover:bg-gray-400">
+        <Link
+          href="#contact"
+          className="bg-white/90 px-5 py-2 text-sm font-medium text-black transition hover:bg-gray-400"
+        >
           Contact
-        </button>
+        </Link>
       </div>
     </div>
   );

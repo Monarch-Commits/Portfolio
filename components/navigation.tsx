@@ -6,10 +6,10 @@ import { Menu, Plus, X } from 'lucide-react';
 import Image from 'next/image';
 
 const navLinks = [
-  { name: 'Home', href: '#' },
-  { name: 'Skills', href: '#skills' },
+  { name: 'Home', href: '/' },
+  { name: 'Experience', href: '#experience' },
   { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Service', href: '#service' },
 ];
 
 export function Navigation() {
@@ -46,7 +46,7 @@ export function Navigation() {
           {/* LEFT: LOGO */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/portfolio.svg"
+              src="/MonarchLogoDark.svg"
               alt="Monarch Logo"
               width={42}
               height={42}

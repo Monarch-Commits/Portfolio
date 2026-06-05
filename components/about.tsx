@@ -9,7 +9,6 @@ import {
   SiTailwindcss,
   SiFramer,
   SiNodedotjs,
-  SiPrisma,
   SiGit,
   SiPostgresql,
 } from 'react-icons/si';

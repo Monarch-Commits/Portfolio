@@ -28,7 +28,7 @@ const services = [
 export default function Services() {
   return (
     <section
-      id="services"
+      id="service"
       className="relative border-t border-white/10 bg-black py-24 text-white"
     >
       <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />

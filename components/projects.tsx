@@ -11,8 +11,8 @@ const projects = [
     thumbnail: '/projects/1.png',
     desc: 'A modern, high-converting digital agency landing page designed for startups, SaaS companies, and creative businesses. It features a premium modern UI with a fully responsive layout, conversion-focused sections, testimonials and pricing blocks, and a clear visual hierarchy. The design is enhanced with clean typography and well-balanced modern spacing to ensure a professional and engaging user experience across all devices.',
     stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
-    live: '#',
-    code: '#',
+    live: 'https://apexstudio-landingpage.vercel.app/',
+    code: 'https://github.com/Monarch-Commits/Apex-Studio-Landing-Page',
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const projects = [
     thumbnail: '/projects/2.png',
     desc: 'A modern and responsive real estate landing page built for luxury property brands, featuring featured listings, testimonials, and conversion-focused sections designed to drive inquiries and showcase premium properties.',
     stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
-    live: '#',
-    code: '#',
+    live: 'https://real-state-liard-eight.vercel.app/',
+    code: 'https://github.com/Monarch-Commits/real-state',
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const projects = [
     thumbnail: '/projects/3.png',
     desc: 'A modern, high-performance landing page developed with Next.js and Tailwind CSS. Designed with a clean bento-grid interface, smooth animations, responsive layouts, and optimized performance to deliver a fast and engaging user experience.',
     stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
-    live: '#',
-    code: '#',
+    live: 'https://flowai-landingpage.vercel.app/',
+    code: 'https://github.com/Monarch-Commits/SaaS-Landing-Page',
   },
   {
     id: 4,
@@ -38,14 +38,17 @@ const projects = [
     thumbnail: '/projects/4.png',
     desc: 'A storytelling-driven portfolio website for a video creator, crafted with a cinematic aesthetic, smooth interactions, and responsive design. Developed using Next.js, Tailwind CSS, and Framer Motion to create an engaging experience that highlights the creator’s brand, content, and services.',
     stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
-    live: '#',
-    code: '#',
+    live: 'https://storycut-landingpage.vercel.app/',
+    code: 'https://github.com/Monarch-Commits/StoryCut-Studio',
   },
 ];
 
 export default function FeaturedProject() {
   return (
-    <section className="relative w-full border-b border-white/10 bg-black py-24 text-white md:py-32 lg:py-40">
+    <section
+      id="project"
+      className="relative w-full border-b border-white/10 bg-black py-24 text-white md:py-32 lg:py-40"
+    >
       <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />
       <Plus className="absolute -right-2 -bottom-2 h-4 w-4 text-white" />
 
@@ -116,6 +119,8 @@ export default function FeaturedProject() {
                   <div className="flex gap-2">
                     <a
                       href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 border border-white/20 bg-white/5 px-3 py-2 text-xs text-white transition hover:bg-white/10"
                     >
                       <ExternalLink className="h-3.5 w-3.5" />
@@ -124,6 +129,8 @@ export default function FeaturedProject() {
 
                     <a
                       href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 border border-white/20 bg-white/70 px-3 py-2 text-xs text-black transition hover:bg-white/10"
                     >
                       <Code className="h-3.5 w-3.5" />

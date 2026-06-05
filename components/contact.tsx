@@ -1,6 +1,7 @@
 'use client';
 
 import { Mail, Plus, Send } from 'lucide-react';
+import { BsGithub } from 'react-icons/bs';
 import { GiThunderBlade } from 'react-icons/gi';
 import { LiaLinkedin } from 'react-icons/lia';
 
@@ -39,18 +40,18 @@ export default function Contact() {
             <div className="mt-6 space-y-4 text-sm">
               <div className="flex items-center gap-3 text-white/60">
                 <Mail className="h-4 w-4" />
-                <span>your.email@example.com</span>
+                <span>monarchpagcas@gmail.com</span>
               </div>
 
               <div className="flex items-center gap-3 text-white/60">
-                <GiThunderBlade className="h-4 w-4" />
-                <span>github.com/yourname</span>
+                <BsGithub className="h-4 w-4" />
+                <span>github.com/Monarch-Commits</span>
               </div>
 
-              <div className="flex items-center gap-3 text-white/60">
+              {/* <div className="flex items-center gap-3 text-white/60">
                 <LiaLinkedin className="h-4 w-4" />
                 <span>linkedin.com/in/yourname</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -88,7 +89,8 @@ export default function Contact() {
 
         {/* Footer note */}
         <p className="mt-10 text-center text-xs text-white/30">
-          © {new Date().getFullYear()} All rights reserved.
+          Thank you for visiting my portfolio. © {new Date().getFullYear()}{' '}
+          Monarch.
         </p>
       </div>
     </section>
