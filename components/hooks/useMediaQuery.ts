@@ -1,10 +1,13 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
-export default function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(false);
+export function useMediaQuery(query: string) {
+  const [matches, setMatches] = useState<boolean>(false);
 
   useEffect(() => {
     const media = window.matchMedia(query);
+
     const update = () => setMatches(media.matches);
 
     update();

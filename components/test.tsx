@@ -3,8 +3,9 @@
 import Image from 'next/image';
 import { Plus } from 'lucide-react';
 import { motion } from 'framer-motion';
-import useMediaQuery from '@/app/hooks/useMediaQuery';
+
 import { SOCIAL_LINKS } from '@/app/data/social';
+import { useMediaQuery } from './hooks/useMediaQuery';
 
 export default function Hero() {
   const isLgUp = useMediaQuery('(min-width: 1024px)');
