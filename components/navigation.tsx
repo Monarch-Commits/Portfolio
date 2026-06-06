@@ -56,12 +56,12 @@ export function Navigation() {
           </Link>
 
           {/* CENTER: DESKTOP NAV */}
-          <div className="hidden items-center gap-15 lg:flex">
+          <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                className="text-muted-foreground inline-block border border-transparent px-3 py-1 text-sm transition-colors hover:border-white/10 hover:bg-white/10"
               >
                 {link.name}
               </Link>
