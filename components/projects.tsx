@@ -9,35 +9,82 @@ const projects = [
     id: 1,
     title: 'Apex Studio Landing Page',
     thumbnail: '/projects/1.png',
-    desc: 'A modern, high-converting digital agency landing page designed for startups, SaaS companies, and creative businesses. It features a premium modern UI with a fully responsive layout, conversion-focused sections, testimonials and pricing blocks, and a clear visual hierarchy. The design is enhanced with clean typography and well-balanced modern spacing to ensure a professional and engaging user experience across all devices.',
-    stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
+    desc: 'A modern, high-converting digital agency landing page designed for startups, SaaS companies, and creative businesses. Built with a premium modern interface, responsive layouts, strategic content sections, testimonials, pricing blocks, and strong visual hierarchy to maximize engagement and conversions.',
+
+    problem:
+      'Many digital agencies struggle to convert visitors into leads because of cluttered layouts, weak messaging, poor content structure, and inconsistent mobile experiences.',
+
+    solution:
+      'Designed and developed a conversion-focused landing page with a clear visual hierarchy, responsive sections, compelling call-to-action placement, modern typography, and smooth micro-interactions using Framer Motion.',
+
+    result:
+      'Delivered a professional agency website that improves user engagement, presents services more effectively, and provides a seamless browsing experience across desktop, tablet, and mobile devices.',
+
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+
     live: 'https://apexstudio-landingpage.vercel.app/',
     code: 'https://github.com/Monarch-Commits/Apex-Studio-Landing-Page',
   },
+
   {
     id: 2,
     title: 'Modern Real Estate',
     thumbnail: '/projects/2.png',
-    desc: 'A modern and responsive real estate landing page built for luxury property brands, featuring featured listings, testimonials, and conversion-focused sections designed to drive inquiries and showcase premium properties.',
-    stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
+    desc: 'A modern luxury real estate landing page built to showcase premium properties through elegant layouts, featured listings, testimonials, and conversion-focused inquiry sections.',
+
+    problem:
+      'Real estate websites often present listings in a generic and outdated manner, making it difficult to build trust and encourage potential buyers to take action.',
+
+    solution:
+      'Created a visually polished real estate experience with modern property cards, responsive layouts, social proof sections, and strategically positioned inquiry forms to increase lead generation opportunities.',
+
+    result:
+      'Established a premium online presence that highlights property listings effectively while creating a smoother and more engaging experience for prospective buyers.',
+
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+
     live: 'https://real-state-liard-eight.vercel.app/',
     code: 'https://github.com/Monarch-Commits/real-state',
   },
+
   {
     id: 3,
     title: 'FlowAI Landing Page',
     thumbnail: '/projects/3.png',
-    desc: 'A modern, high-performance landing page developed with Next.js and Tailwind CSS. Designed with a clean bento-grid interface, smooth animations, responsive layouts, and optimized performance to deliver a fast and engaging user experience.',
-    stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
+    desc: 'A modern SaaS landing page featuring a clean bento-grid layout, responsive design, smooth animations, and performance-focused development tailored for AI and technology products.',
+
+    problem:
+      'AI startups frequently struggle to explain complex products in a simple and engaging way while maintaining fast loading speeds and modern visual appeal.',
+
+    solution:
+      'Built a structured SaaS landing page using a bento-grid design system, concise content sections, smooth animations, and optimized Next.js rendering to improve clarity and performance.',
+
+    result:
+      'Created a professional product marketing experience that communicates value quickly, maintains excellent responsiveness, and delivers a polished modern SaaS aesthetic.',
+
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+
     live: 'https://flowai-landingpage.vercel.app/',
     code: 'https://github.com/Monarch-Commits/SaaS-Landing-Page',
   },
+
   {
     id: 4,
     title: 'Creator Portfolio Landing Page',
     thumbnail: '/projects/4.png',
-    desc: 'A storytelling-driven portfolio website for a video creator, crafted with a cinematic aesthetic, smooth interactions, and responsive design. Developed using Next.js, Tailwind CSS, and Framer Motion to create an engaging experience that highlights the creator’s brand, content, and services.',
-    stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion'],
+    desc: 'A storytelling-driven portfolio website created for content creators and video professionals. Features cinematic visuals, smooth interactions, and a modern personal branding experience.',
+
+    problem:
+      'Many creator portfolios fail to communicate personality, showcase work effectively, and create a memorable experience for potential clients and collaborators.',
+
+    solution:
+      'Designed a cinematic portfolio experience using storytelling-based layouts, motion design, visual hierarchy, and responsive interactions to highlight the creator’s work and services.',
+
+    result:
+      'Delivered an engaging personal brand experience that improves project presentation, strengthens credibility, and encourages client inquiries.',
+
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+
     live: 'https://storycut-landingpage.vercel.app/',
     code: 'https://github.com/Monarch-Commits/StoryCut-Studio',
   },
@@ -82,16 +129,6 @@ export default function FeaturedProject() {
                   fill
                   className="object-cover transition-transform duration-100 group-hover:scale-103"
                 />
-
-                {/* STRONG DARK OVERLAY ON HOVER */}
-                <div className="absolute inset-0 bg-black/10 transition-all duration-300 group-hover:bg-black/95" />
-
-                {/* CLEAR HOVER TEXT */}
-                <div className="absolute inset-0 flex items-center justify-center px-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <p className="max-w-md text-center text-base leading-relaxed font-medium text-white">
-                    {project.desc}
-                  </p>
-                </div>
               </div>
 
               {/* CONTENT */}
@@ -137,7 +174,13 @@ export default function FeaturedProject() {
                       Code
                     </a>
                   </div>
-                  <AlertDialogBasic title={project.title} desc={project.desc} />
+                  <AlertDialogBasic
+                    solution={project.solution}
+                    problem={project.problem}
+                    result={project.result}
+                    title={project.title}
+                    desc={project.desc}
+                  />
                 </div>
               </div>
             </motion.div>

@@ -37,7 +37,7 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-100 transition-transform duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-90 transition-transform duration-300 ${
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
