@@ -2,15 +2,12 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useMediaQuery } from '../hooks/useMediaQuery';
 
 export default function CenterImage() {
-  const isLgUp = useMediaQuery('(min-width: 1024px)');
-
   return (
     <motion.div
-      initial={isLgUp ? { opacity: 0, y: 10 } : undefined}
-      animate={isLgUp ? { opacity: 1, y: 0 } : undefined}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="relative z-20 mt-16 flex w-full max-w-2xl justify-center xl:absolute xl:bottom-0 xl:left-1/2 xl:mt-0 xl:-translate-x-1/2"
     >

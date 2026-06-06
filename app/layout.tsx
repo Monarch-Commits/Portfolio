@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, Geist } from 'next/font/google';
 import './globals.css';
 import { Navigation } from '@/components/navigation';
 import { cn } from '@/lib/utils';
+import { Toaster } from 'react-hot-toast';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -80,6 +81,38 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <Navigation />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              background: '#171717',
+              color: '#f1f5f9',
+              border: '1px solid #1e293b',
+              padding: '12px 16px',
+              fontSize: '14px',
+              borderRadius: '0px',
+            },
+
+            success: {
+              style: {
+                background: '#171717',
+                color: '#f1f5f9',
+                border: '1px solid #22c55e',
+                borderRadius: '0px',
+              },
+            },
+
+            error: {
+              style: {
+                background: '#171717',
+                color: '#f1f5f9',
+                border: '1px solid #ef4444',
+                borderRadius: '0px',
+              },
+            },
+          }}
+        />
         {children}
       </body>
     </html>
