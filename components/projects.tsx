@@ -12,39 +12,40 @@ import {
 const projects = [
   {
     id: 1,
-    title: 'Apex Studio Landing Page',
-    thumbnail: '/projects/1.png',
-    desc: 'A modern, high-converting digital agency landing page designed for startups, SaaS companies, and creative businesses. Built with a premium modern interface, responsive layouts, strategic content sections, testimonials, pricing blocks, and strong visual hierarchy to maximize engagement and conversions.',
+
+    title: 'FlowAI Landing Page',
+    thumbnail: '/projects/3.png',
+    desc: 'A SaaS landing page for AI and tech products. Simple bento-grid layout with smooth animations and responsive design.',
 
     problem:
-      'Many digital agencies struggle to convert visitors into leads because of cluttered layouts, weak messaging, poor content structure, and inconsistent mobile experiences.',
+      'AI products are usually hard to explain in a way that normal users quickly understand, especially on a website.',
 
     solution:
-      'Designed and developed a conversion-focused landing page with a clear visual hierarchy, responsive sections, compelling call-to-action placement, modern typography, and smooth micro-interactions using Framer Motion.',
+      'Built a clean landing page using a bento-grid layout, simple sections, and basic animations. Focused more on clarity and speed.',
 
     result:
-      'Delivered a professional agency website that improves user engagement, presents services more effectively, and provides a seamless browsing experience across desktop, tablet, and mobile devices.',
+      'The site feels clean and easy to use. It shows the product clearly and works well on both mobile and desktop.',
 
     stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
 
-    live: 'https://apexstudio-landingpage.vercel.app/',
-    code: 'https://github.com/Monarch-Commits/Apex-Studio-Landing-Page',
+    live: 'https://flowai-landingpage.vercel.app/',
+    code: 'https://github.com/Monarch-Commits/SaaS-Landing-Page',
   },
 
   {
     id: 2,
     title: 'Modern Real Estate',
     thumbnail: '/projects/2.png',
-    desc: 'A modern luxury real estate landing page built to showcase premium properties through elegant layouts, featured listings, testimonials, and conversion-focused inquiry sections.',
+    desc: 'A modern luxury real estate landing page designed to showcase premium properties using elegant layouts, featured listings, testimonials, and conversion-focused inquiry sections.',
 
     problem:
-      'Real estate websites often present listings in a generic and outdated manner, making it difficult to build trust and encourage potential buyers to take action.',
+      'Many real estate websites present listings in a generic and outdated way, making it hard to build trust and encourage potential buyers to take action.',
 
     solution:
-      'Created a visually polished real estate experience with modern property cards, responsive layouts, social proof sections, and strategically positioned inquiry forms to increase lead generation opportunities.',
+      'Created a visually polished experience using modern property cards, responsive layouts, social proof sections, and well-placed inquiry forms to improve lead generation.',
 
     result:
-      'Established a premium online presence that highlights property listings effectively while creating a smoother and more engaging experience for prospective buyers.',
+      'Established a premium online presence that presents listings more effectively while delivering a smoother and more engaging experience for potential buyers.',
 
     stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
 
@@ -54,40 +55,39 @@ const projects = [
 
   {
     id: 3,
-    title: 'FlowAI Landing Page',
-    thumbnail: '/projects/3.png',
-    desc: 'A modern SaaS landing page featuring a clean bento-grid layout, responsive design, smooth animations, and performance-focused development tailored for AI and technology products.',
+    title: 'Apex Studio Landing Page',
+    thumbnail: '/projects/1.png',
+    desc: 'A modern agency landing page designed for startups, SaaS, and creative businesses with a clean, premium look and strong focus on conversions.',
 
     problem:
-      'AI startups frequently struggle to explain complex products in a simple and engaging way while maintaining fast loading speeds and modern visual appeal.',
+      'Most agency websites fail to convert visitors due to unclear messaging, cluttered layouts, and weak user experience.',
 
     solution:
-      'Built a structured SaaS landing page using a bento-grid design system, concise content sections, smooth animations, and optimized Next.js rendering to improve clarity and performance.',
+      'Built a conversion-focused layout with clear hierarchy, strong CTAs, responsive design, and smooth micro-interactions using Framer Motion.',
 
     result:
-      'Created a professional product marketing experience that communicates value quickly, maintains excellent responsiveness, and delivers a polished modern SaaS aesthetic.',
+      'Improved user engagement, clearer service presentation, and a smoother experience across all devices.',
 
     stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
 
-    live: 'https://flowai-landingpage.vercel.app/',
-    code: 'https://github.com/Monarch-Commits/SaaS-Landing-Page',
+    live: 'https://apexstudio-landingpage.vercel.app/',
+    code: 'https://github.com/Monarch-Commits/Apex-Studio-Landing-Page',
   },
 
   {
     id: 4,
     title: 'Creator Portfolio Landing Page',
     thumbnail: '/projects/4.png',
-    desc: 'A storytelling-driven portfolio website created for content creators and video professionals. Features cinematic visuals, smooth interactions, and a modern personal branding experience.',
+    desc: 'A portfolio website for content creators and video professionals with a storytelling approach, cinematic visuals, and smooth interactions.',
 
     problem:
-      'Many creator portfolios fail to communicate personality, showcase work effectively, and create a memorable experience for potential clients and collaborators.',
+      'Most creator portfolios don’t really show personality or make the work memorable. They often feel plain and don’t stand out.',
 
     solution:
-      'Designed a cinematic portfolio experience using storytelling-based layouts, motion design, visual hierarchy, and responsive interactions to highlight the creator’s work and services.',
+      'Built a cinematic-style layout focused on storytelling, with smooth animations and clear structure to better highlight the creator’s work and services.',
 
     result:
-      'Delivered an engaging personal brand experience that improves project presentation, strengthens credibility, and encourages client inquiries.',
-
+      'The portfolio feels more personal and engaging. It presents the work better and helps build trust with potential clients.',
     stack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
 
     live: 'https://storycut-landingpage.vercel.app/',
