@@ -43,7 +43,7 @@ export function AlertDialogBasic({
         </Button>
       </AlertDialogTrigger>
 
-      <AlertDialogContent className="rounded-none border border-white/10 bg-zinc-950 text-white">
+      <AlertDialogContent className="z-100 h-[85dvh] max-h-[85dvh] rounded-none border border-white/10 bg-zinc-950 text-white">
         {/* corners accent */}
         <Plus className="absolute -top-2 -left-2 h-4 w-4 text-white" />
         <Plus className="absolute -top-2 -right-2 h-4 w-4 text-white" />
