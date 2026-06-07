@@ -60,7 +60,7 @@ export function AlertDialogBasic({
           </AlertDialogDescription>
         </AlertDialogHeader>
 
-        <Accordion type="single" collapsible defaultValue="problem">
+        <Accordion type="single" collapsible defaultValue="desc">
           <AccordionItem value="desc" className="border-white/20">
             <AccordionTrigger className="text-sm text-white transition hover:text-cyan-300">
               Description
