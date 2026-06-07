@@ -149,7 +149,7 @@ export default function FeaturedProject() {
                       className="w-full"
                     >
                       <AccordionItem value="desc">
-                        <AccordionTrigger className="text-sm text-white transition hover:text-cyan-300">
+                        <AccordionTrigger className="text-sm text-white">
                           Description
                         </AccordionTrigger>
                         <AccordionContent className="text-xs leading-relaxed text-zinc-300">
