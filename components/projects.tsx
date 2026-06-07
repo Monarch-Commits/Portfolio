@@ -148,7 +148,7 @@ export default function FeaturedProject() {
                       defaultValue="desc"
                       className="w-full"
                     >
-                      <AccordionItem value="desc">
+                      <AccordionItem value="desc" className="border-white/10">
                         <AccordionTrigger className="text-sm text-white">
                           Description
                         </AccordionTrigger>
