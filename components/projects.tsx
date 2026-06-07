@@ -3,7 +3,12 @@ import { motion } from 'framer-motion';
 import { Plus, Code, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { AlertDialogBasic } from './ui/button/dialogbutton';
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 const projects = [
   {
     id: 1,
@@ -129,6 +134,67 @@ export default function FeaturedProject() {
                   fill
                   className="object-cover transition-transform duration-100 group-hover:scale-103"
                 />
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 overflow-y-auto opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  {/* Modern glass + gradient background */}
+                  <div className="h-full w-full bg-gradient-to-b from-zinc-950/90 via-zinc-950/95 to-black/95 p-5 backdrop-blur-xl">
+                    {/* Accent glow line */}
+                    <div className="mb-3 h-[1px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+
+                    <Accordion
+                      type="single"
+                      collapsible
+                      defaultValue="desc"
+                      className="w-full"
+                    >
+                      <AccordionItem value="desc">
+                        <AccordionTrigger className="text-sm text-white transition hover:text-cyan-300">
+                          Description
+                        </AccordionTrigger>
+                        <AccordionContent className="text-xs leading-relaxed text-zinc-300">
+                          {project.desc}
+                        </AccordionContent>
+                      </AccordionItem>
+
+                      <AccordionItem
+                        value="problem"
+                        className="border-red-500/20"
+                      >
+                        <AccordionTrigger className="text-red-400">
+                          Problem
+                        </AccordionTrigger>
+                        <AccordionContent className="text-xs text-zinc-300">
+                          {project.problem}
+                        </AccordionContent>
+                      </AccordionItem>
+
+                      <AccordionItem
+                        value="solution"
+                        className="border-blue-500/20"
+                      >
+                        <AccordionTrigger className="text-blue-400">
+                          Solution
+                        </AccordionTrigger>
+                        <AccordionContent className="text-xs text-zinc-300">
+                          {project.solution}
+                        </AccordionContent>
+                      </AccordionItem>
+
+                      <AccordionItem
+                        value="result"
+                        className="border-green-500/20"
+                      >
+                        <AccordionTrigger className="text-green-400">
+                          Result
+                        </AccordionTrigger>
+                        <AccordionContent className="text-xs text-zinc-300">
+                          {project.result}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </div>
+                </div>
               </div>
 
               {/* CONTENT */}
