@@ -140,7 +140,6 @@ export default function FeaturedProject() {
                   {/* Modern glass + gradient background */}
                   <div className="h-full w-full bg-gradient-to-b from-zinc-950/90 via-zinc-950/95 to-black/95 p-5 backdrop-blur-xl">
                     {/* Accent glow line */}
-                    <div className="mb-3 h-[1px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent" />
 
                     <Accordion
                       type="single"

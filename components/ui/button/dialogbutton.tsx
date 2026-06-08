@@ -70,7 +70,7 @@ export function AlertDialogBasic({
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="problem" className="border-red-500/20">
+          <AccordionItem value="problem" className="border-white/20">
             <AccordionTrigger className="text-red-400">
               Problem
             </AccordionTrigger>
@@ -79,7 +79,7 @@ export function AlertDialogBasic({
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="solution" className="border-blue-500/20">
+          <AccordionItem value="solution" className="border-white/20">
             <AccordionTrigger className="text-blue-400">
               Solution
             </AccordionTrigger>
@@ -88,7 +88,7 @@ export function AlertDialogBasic({
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="result" className="border-green-500/20">
+          <AccordionItem value="result" className="border-white/20">
             <AccordionTrigger className="text-green-400">
               Result
             </AccordionTrigger>
