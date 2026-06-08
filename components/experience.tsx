@@ -27,17 +27,14 @@ const experiences = [
     company: 'Makilala Institute of Science and Technology',
     period: 'May 2024 – January 2025',
     description: [
-      'Developed a centralized system to manage and track library collections, including books and journals.',
-      'Implemented full CRUD operations, report generation, and subject-based monitoring.',
-      'Designed the system to improve organization, reporting efficiency, and long-term monitoring of library resources.',
+      'Developed a centralized library management system for tracking books and journals.',
+      'Built features for managing, updating, and organizing library records with subject-based categorization.',
+      'Implemented reporting tools to improve monitoring and resource management.',
+      'Designed to improve efficiency in library operations and record keeping.',
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     links: [
       { label: 'View Project', href: 'https://libraryholding.vercel.app/' },
-      {
-        label: 'View Documentation',
-        href: 'https://drive.google.com/file/d/11FKfn6ILRg7Nry9gOfNd0HCFw-6y6GsK/preview',
-      },
     ],
   },
 ];

@@ -159,7 +159,7 @@ export default function FeaturedProject() {
 
                       <AccordionItem
                         value="problem"
-                        className="border-red-500/20"
+                        className="border-white/10"
                       >
                         <AccordionTrigger className="text-red-400">
                           Problem
@@ -171,7 +171,7 @@ export default function FeaturedProject() {
 
                       <AccordionItem
                         value="solution"
-                        className="border-blue-500/20"
+                        className="border-white/10"
                       >
                         <AccordionTrigger className="text-blue-400">
                           Solution
@@ -181,10 +181,7 @@ export default function FeaturedProject() {
                         </AccordionContent>
                       </AccordionItem>
 
-                      <AccordionItem
-                        value="result"
-                        className="border-green-500/20"
-                      >
+                      <AccordionItem value="result" className="border-white/10">
                         <AccordionTrigger className="text-green-400">
                           Result
                         </AccordionTrigger>
