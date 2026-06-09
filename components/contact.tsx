@@ -47,7 +47,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-background relative border-y border-white/10 py-24 text-white">
+    <section
+      id="contact"
+      className="bg-background relative border-y border-white/10 py-24 text-white"
+    >
       <Plus className="absolute -bottom-2 -left-2 h-4 w-4" />
       <Plus className="absolute -right-2 -bottom-2 h-4 w-4" />
 
