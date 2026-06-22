@@ -24,6 +24,7 @@ export default function CenterImage() {
         width={700}
         height={900}
         priority
+        sizes="(max-width: 768px) 100vw, 40vw"
         className="relative h-auto w-full object-contain"
       />
     </motion.div>

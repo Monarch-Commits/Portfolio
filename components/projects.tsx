@@ -132,13 +132,14 @@ export default function FeaturedProject() {
                   src={project.thumbnail}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-100 group-hover:scale-103"
                 />
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 overflow-y-auto opacity-0 transition-all duration-300 group-hover:opacity-100">
                   {/* Modern glass + gradient background */}
-                  <div className="h-full w-full bg-gradient-to-b from-zinc-950/90 via-zinc-950/95 to-black/95 p-5 backdrop-blur-xl">
+                  <div className="h-full w-full bg-linear-to-b from-zinc-950/90 via-zinc-950/95 to-black/95 p-5 backdrop-blur-xl">
                     {/* Accent glow line */}
 
                     <Accordion

@@ -19,6 +19,7 @@ export default function AppleIsometricGrid() {
   const lifts = useRef<number[]>(new Array(COLS * ROWS).fill(0));
   const time = useRef(0);
   const autoHoverTime = useRef(0);
+  const autoResumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const config = useRef({ hoverLift: 280, hoverRadius: 160 });
   const bounds = useRef({ cx: 0, cy: 0, scale: 1 });
@@ -89,7 +90,8 @@ export default function AppleIsometricGrid() {
     ro.observe(container);
     resize();
 
-    // LISTENERS
+    // --- LISTENERS ---
+
     const handlePointerMove = (e: PointerEvent) => {
       pointer.current.isAuto = false;
       const rect = canvas.getBoundingClientRect();
@@ -103,24 +105,39 @@ export default function AppleIsometricGrid() {
       pointer.current.isAuto = true;
     };
 
-    const handleTouchStart = () => {
+    const handleTouchStart = (e: TouchEvent) => {
+      if (autoResumeTimer.current) clearTimeout(autoResumeTimer.current);
+      if (e.touches.length === 0) return;
+      const rect = canvas.getBoundingClientRect();
+      pointer.current.x = e.touches[0].clientX - rect.left;
+      pointer.current.y = e.touches[0].clientY - rect.top;
+      pointer.current.active = true;
       pointer.current.isAuto = false;
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches.length === 0) return;
-      pointer.current.isAuto = false;
       const rect = canvas.getBoundingClientRect();
       pointer.current.x = e.touches[0].clientX - rect.left;
       pointer.current.y = e.touches[0].clientY - rect.top;
       pointer.current.active = true;
+      pointer.current.isAuto = false;
+    };
+
+    const handleTouchEnd = () => {
+      pointer.current.active = false;
+      autoResumeTimer.current = setTimeout(() => {
+        pointer.current.isAuto = true;
+      }, 1500);
     };
 
     canvas.addEventListener('pointermove', handlePointerMove);
     canvas.addEventListener('pointerleave', handlePointerLeave);
     canvas.addEventListener('touchstart', handleTouchStart, { passive: true });
     canvas.addEventListener('touchmove', handleTouchMove, { passive: true });
-    canvas.addEventListener('touchend', handlePointerLeave);
+    canvas.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    // --- DRAW HELPERS ---
 
     const poly = (
       ctx: CanvasRenderingContext2D,
@@ -152,11 +169,9 @@ export default function AppleIsometricGrid() {
       const z0 = lift;
       const z1 = lift + CUBE_H;
 
-      // --- BINAGONG KULAY (DARKER CUBES) ---
-      const base = '#0a0a0c'; // Ginawang mas madilim na itim para sa gilid
-      const top = '#111113'; // Ginawang mas madilim na abo para sa ibabaw
+      const base = '#0a0a0c';
+      const top = '#111113';
 
-      // --- ORIGINAL BORDERS AT GLOW (HINDI BINAGO) ---
       const stroke = 'rgba(255,255,255,0.06)';
       const glow = `rgba(255,255,255,${0.08 + highlight})`;
 
@@ -188,6 +203,8 @@ export default function AppleIsometricGrid() {
       ctx.shadowBlur = 0;
     };
 
+    // --- ANIMATION LOOP ---
+
     const draw = () => {
       const { cx, cy, scale } = bounds.current;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -207,7 +224,7 @@ export default function AppleIsometricGrid() {
       const { x: px, y: py, active, isAuto } = pointer.current;
       const isHovering = active || isAuto;
 
-      // Physics Loop
+      // Physics loop
       for (let r = 0; r < ROWS; r++) {
         for (let c = 0; c < COLS; c++) {
           const i = r * COLS + c;
@@ -238,7 +255,7 @@ export default function AppleIsometricGrid() {
         }
       }
 
-      // Render Loop
+      // Render loop (painter's order)
       for (let sum = 0; sum < COLS + ROWS; sum++) {
         for (let r = 0; r < ROWS; r++) {
           const c = sum - r;
@@ -260,11 +277,12 @@ export default function AppleIsometricGrid() {
     return () => {
       cancelAnimationFrame(raf);
       ro.disconnect();
+      if (autoResumeTimer.current) clearTimeout(autoResumeTimer.current);
       canvas.removeEventListener('pointermove', handlePointerMove);
       canvas.removeEventListener('pointerleave', handlePointerLeave);
       canvas.removeEventListener('touchstart', handleTouchStart);
       canvas.removeEventListener('touchmove', handleTouchMove);
-      canvas.removeEventListener('touchend', handlePointerLeave);
+      canvas.removeEventListener('touchend', handleTouchEnd);
     };
   }, []);
 
