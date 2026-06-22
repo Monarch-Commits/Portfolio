@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function FastPerformanceCard() {
@@ -21,17 +20,7 @@ export default function FastPerformanceCard() {
 
         {/* RIGHT VISUAL CONTENT (CANVAS CONTAINER) */}
         <div className="relative flex w-full justify-center md:h-[500px] lg:h-[400px] lg:justify-end">
-          <motion.div
-            initial={{ opacity: 0, y: 80, rotate: 5 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: 'spring',
-              bounce: 0.2,
-            }}
-            className="relative aspect-[4/3] h-full w-full max-w-[500px] lg:aspect-auto lg:max-w-none"
-          >
+          <div className="relative aspect-[4/3] h-full w-full max-w-[500px] lg:aspect-auto lg:max-w-none">
             <Image
               src="/Faster.svg"
               alt="Fast Mockup"
@@ -40,7 +29,7 @@ export default function FastPerformanceCard() {
               className="object-contain"
               sizes="(max-w-7xl) 100vw, 50vw"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
