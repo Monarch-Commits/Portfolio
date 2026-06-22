@@ -31,7 +31,7 @@ export default function FocusOnSection() {
           <Plus className="absolute -bottom-2 -left-2 h-4 w-4 text-white" />
           <Plus className="absolute -right-2 -bottom-2 h-4 w-4 text-white" />
           <ResponsiveDesignSection />
-          <SmoothAnimationSection />
+          {/* <SmoothAnimationSection /> */}
           <FastPerformanceCard />
           <CleanScalableCode />
         </div>
