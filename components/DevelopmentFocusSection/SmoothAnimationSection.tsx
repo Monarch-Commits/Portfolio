@@ -20,21 +20,19 @@ export default function SmoothAnimationSection() {
         </div>
 
         {/* RIGHT VISUAL CONTENT (CANVAS CONTAINER) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative flex w-full justify-center lg:justify-end"
-        >
-          {/* Responsive Height Wrapper */}
-          <div className="relative h-[300px] w-full max-w-3xl rounded-3xl sm:h-[400px]">
-            {/* Inner Grid */}
+        <div className="relative flex w-full justify-center md:h-[500px] lg:h-[400px] lg:justify-end">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative aspect-[4/3] h-full w-full max-w-[500px] lg:aspect-auto lg:max-w-none"
+          >
             <div className="h-full w-full overflow-visible rounded-3xl">
               <AppleIsometricGrid />
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

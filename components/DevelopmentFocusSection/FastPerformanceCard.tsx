@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function FastPerformanceCard() {
   return (
-    <section className="bg-background relative w-full overflow-hidden text-white">
+    <section className="relative w-full overflow-hidden bg-black text-white">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-4 px-2 md:px-12 lg:grid-cols-2 lg:gap-12">
         {/* LEFT TEXT CONTENT */}
         <div className="z-10 w-full max-w-full space-y-3 px-4 pt-10 sm:max-w-xl sm:space-y-4 sm:px-0 md:max-w-2xl lg:max-w-xl lg:pt-0">
