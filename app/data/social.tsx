@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'Resume',
-    href: '/monarch-resume.pdf',
+    href: '/MonarchResume.pdf',
     icon: <BsFileEarmarkText className="h-4 w-4" />,
   },
 ];

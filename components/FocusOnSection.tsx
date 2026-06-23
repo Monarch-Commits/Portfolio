@@ -1,6 +1,5 @@
 import { Plus } from 'lucide-react';
 import ResponsiveDesignSection from './DevelopmentFocusSection/ResponsiveDesignSection';
-import SmoothAnimationSection from './DevelopmentFocusSection/SmoothAnimationSection';
 import FastPerformanceCard from './DevelopmentFocusSection/FastPerformanceCard';
 import CleanScalableCode from './DevelopmentFocusSection/CleanScalableCode';
 
@@ -33,7 +32,6 @@ export default function FocusOnSection() {
           <ResponsiveDesignSection />
           <FastPerformanceCard />
           <CleanScalableCode />
-          <SmoothAnimationSection />
         </div>
       </div>
     </section>
