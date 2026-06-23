@@ -39,7 +39,7 @@ export default function Services() {
       <div className="relative mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="mb-14 text-center">
-          <h2 className="text-xs tracking-[0.35em] text-white/40 uppercase">
+          <h2 className="text-xs tracking-[0.35em] text-white/70 uppercase">
             Services
           </h2>
           <h3 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">

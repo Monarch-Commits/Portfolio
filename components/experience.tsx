@@ -79,7 +79,7 @@ export default function ExperienceSection() {
                     {exp.role} • {exp.company}
                   </p>
                 </div>
-                <span className="text-sm text-white/40">{exp.period}</span>
+                <span className="text-sm text-white/70">{exp.period}</span>
               </div>
 
               {/* Description Bullet Points */}

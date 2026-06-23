@@ -56,7 +56,7 @@ export default function Contact() {
 
       <div className="mx-auto max-w-5xl px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-xs tracking-[0.35em] text-white/40 uppercase">
+          <h2 className="text-xs tracking-[0.35em] text-white/70 uppercase">
             Contact
           </h2>
           <h3 className="mt-3 text-4xl font-semibold md:text-5xl">

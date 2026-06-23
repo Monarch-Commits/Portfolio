@@ -12,7 +12,7 @@ export default function Hero() {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
       className="bg-background relative mx-auto flex h-auto w-full flex-col items-center justify-between gap-16 overflow-visible border-b border-white/10 px-4 py-24 sm:px-8 md:py-32 lg:gap-20 lg:px-18 lg:py-50 xl:flex-row"
     >
       <Plus className="absolute -bottom-2 -left-2 z-50 h-4 w-4 text-white" />

@@ -8,16 +8,14 @@ export default function FocusOnSection() {
     <section className="border-b border-white/10 bg-black px-4 py-24 sm:px-8 lg:px-12">
       <div className="container mx-auto">
         {/* Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-primary text-sm font-medium">
+        <div className="mb-14 text-center">
+          <h2 className="text-xs tracking-[0.35em] text-white/70 uppercase">
             Development Standards
-          </p>
-
-          <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
-            What I Focus On
           </h2>
-
-          <p className="text-muted-foreground mt-6 text-lg">
+          <h3 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
+            What I Focus On
+          </h3>
+          <p className="mx-auto mt-4 max-w-2xl text-white/50">
             I build modern web applications that are fast, easy to use, and
             built to grow as the project expands.
           </p>
