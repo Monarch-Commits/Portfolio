@@ -128,7 +128,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <p className="mt-10 text-center text-xs text-white/30">
+        <p className="mt-10 text-center text-xs text-white/70">
           Thank you for visiting my portfolio. © {new Date().getFullYear()}{' '}
           Monarch.
         </p>
