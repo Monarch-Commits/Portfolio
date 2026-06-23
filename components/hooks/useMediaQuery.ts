@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 export function useMediaQuery(query: string) {
@@ -7,9 +9,10 @@ export function useMediaQuery(query: string) {
     const media = window.matchMedia(query);
 
     const update = () => setMatches(media.matches);
-    update();
 
+    update();
     media.addEventListener('change', update);
+
     return () => media.removeEventListener('change', update);
   }, [query]);
 

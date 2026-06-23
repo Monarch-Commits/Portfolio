@@ -22,7 +22,7 @@ export default function CleanScalableCode() {
         <div className="relative flex w-full justify-center md:h-[500px] lg:h-[400px] lg:justify-end">
           <div className="relative aspect-[4/3] h-full w-full max-w-[500px] lg:aspect-auto lg:max-w-none">
             <Image
-              src="/clean-scalable-code.svg"
+              src="/cleanCode.svg"
               alt="Fast Mockup"
               fill
               priority

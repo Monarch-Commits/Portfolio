@@ -1,14 +1,27 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 export default function CenterImage() {
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const reduceMotion = useReducedMotion();
+
+  const shouldAnimate = isDesktop && !reduceMotion;
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      initial={shouldAnimate ? { opacity: 0, y: 10 } : false}
+      animate={shouldAnimate ? { opacity: 1, y: 0 } : false}
+      transition={
+        shouldAnimate
+          ? {
+              duration: 0.6,
+              ease: [0.25, 0.1, 0.25, 1],
+            }
+          : undefined
+      }
       className="relative z-20 mt-16 flex w-full max-w-2xl justify-center xl:absolute xl:bottom-0 xl:left-1/2 xl:mt-0 xl:-translate-x-1/2"
     >
       {/* glow ring */}
