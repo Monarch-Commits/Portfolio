@@ -33,7 +33,7 @@ export default function ResponsiveDesignSection() {
             className="relative aspect-[4/3] h-full w-full max-w-[500px] lg:aspect-auto lg:max-w-none"
           >
             <Image
-              src="/Mockup.svg"
+              src="/Mockup.png"
               alt="Mobile Responsive Mockup"
               fill
               className="object-contain object-bottom lg:object-right-bottom"
