@@ -39,7 +39,7 @@ export default function FeaturedProject() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               className="group border border-white/10 bg-zinc-900"
             >
               {/* IMAGE */}
@@ -50,6 +50,7 @@ export default function FeaturedProject() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-100 group-hover:scale-103"
+                  loading="lazy"
                 />
 
                 {/* Hover Overlay */}

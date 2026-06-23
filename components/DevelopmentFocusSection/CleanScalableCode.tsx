@@ -25,7 +25,6 @@ export default function CleanScalableCode() {
               src="/cleanCode.svg"
               alt="Fast Mockup"
               fill
-              priority
               className="object-contain"
               sizes="(max-w-7xl) 100vw, 50vw"
             />

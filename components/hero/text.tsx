@@ -1,33 +1,10 @@
 'use client';
 
-import { motion, useReducedMotion, easeOut } from 'framer-motion';
-import { useMediaQuery } from '../hooks/useMediaQuery';
 import Link from 'next/link';
 
 export default function Text() {
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const reduceMotion = useReducedMotion();
-
-  const shouldAnimate = isDesktop && !reduceMotion;
-
-  const Wrapper = shouldAnimate ? motion.div : 'div';
-
-  const animationProps = shouldAnimate
-    ? {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        transition: {
-          duration: 0.6,
-          ease: easeOut,
-        },
-      }
-    : {};
-
   return (
-    <Wrapper
-      {...animationProps}
-      className="relative z-50 mx-auto w-full max-w-xl text-center xl:mx-0 xl:text-left"
-    >
+    <div className="relative z-50 mx-auto w-full max-w-xl text-center xl:mx-0 xl:text-left">
       <span className="mb-4 inline-block text-xs tracking-[0.30em] text-gray-400 uppercase">
         Web Developer — Frontend-focused
       </span>
@@ -63,6 +40,6 @@ export default function Text() {
           Contact
         </Link>
       </div>
-    </Wrapper>
+    </div>
   );
 }

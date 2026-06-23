@@ -36,7 +36,6 @@ export default function ResponsiveDesignSection() {
               src="/Mockup.svg"
               alt="Mobile Responsive Mockup"
               fill
-              priority
               className="object-contain object-bottom lg:object-right-bottom"
               sizes="(max-w-7xl) 100vw, 50vw"
             />

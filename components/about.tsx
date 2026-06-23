@@ -44,6 +44,7 @@ export default function DeveloperStory() {
             alt="Web Developer"
             width={1000}
             height={1000}
+            loading="lazy"
             className="h-auto w-full object-contain"
           />
 

@@ -25,7 +25,6 @@ export default function FastPerformanceCard() {
               src="/Faster.svg"
               alt="Fast Mockup"
               fill
-              priority
               className="object-contain"
               sizes="(max-w-7xl) 100vw, 50vw"
             />
