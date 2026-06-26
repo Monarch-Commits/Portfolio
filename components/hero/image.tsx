@@ -8,12 +8,9 @@ export default function CenterImage() {
       {/* glow ring */}
       <div className="absolute top-10 left-1/2 h-[160px] w-[160px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 shadow-[0_0_60px_rgba(255,255,255,0.25)] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] lg:h-70 lg:w-[280px]" />
 
-      {/* blur glow */}
-      <div className="absolute top-1/2 left-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-white/5 blur-[60px] sm:h-[200px] sm:w-[200px] md:h-[280px] md:w-[280px] lg:h-[320px] lg:w-[320px]" />
-
       {/* image */}
       <Image
-        src="/portfolio.png"
+        src="/hero2.png"
         alt="Portrait"
         width={700}
         height={900}

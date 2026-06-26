@@ -40,7 +40,7 @@ export default function DeveloperStory() {
         {/* IMAGE */}
         <div className="relative w-full max-w-md border-b border-white/10">
           <Image
-            src="/front.png"
+            src="/about2.png"
             alt="Web Developer"
             width={1000}
             height={1000}
