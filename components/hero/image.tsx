@@ -4,19 +4,14 @@ import Image from 'next/image';
 
 export default function CenterImage() {
   return (
-    <div className="relative z-20 mt-16 flex w-full max-w-2xl justify-center xl:absolute xl:bottom-0 xl:left-1/2 xl:mt-0 xl:-translate-x-1/2">
-      {/* glow ring */}
-      <div className="absolute top-10 left-1/2 h-[160px] w-[160px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 shadow-[0_0_60px_rgba(255,255,255,0.25)] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] lg:h-70 lg:w-[280px]" />
-
-      {/* image */}
+    <div className="relative z-20 flex justify-center">
       <Image
-        src="/hero2.png"
-        alt="Portrait"
-        width={700}
-        height={900}
+        src="/48.svg"
+        alt="iPhone Mockup"
+        width={500}
+        height={500}
         priority
-        sizes="(max-width: 768px) 100vw, 40vw"
-        className="relative h-auto w-full object-contain"
+        className="h-auto w-full object-contain"
       />
     </div>
   );
