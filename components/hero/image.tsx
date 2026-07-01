@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export default function CenterImage() {
   return (
-    <div className="relative z-20 flex justify-center">
+    <div className="relative z-20 hidden justify-center md:flex">
       <Image
-        src="/48.svg"
+        src="/hero2.svg"
         alt="iPhone Mockup"
         width={500}
         height={500}
