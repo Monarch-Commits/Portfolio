@@ -17,7 +17,7 @@ export default function CenterImage() {
         alt="iPhone Mockup"
         width={500}
         height={500}
-        priority
+        fetchPriority="high"
         onLoad={() => setLoaded(true)}
         className={`h-auto w-full object-contain transition-opacity duration-300 ${
           loaded ? 'opacity-100' : 'opacity-0'

@@ -50,7 +50,7 @@ export default function FeaturedProject() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-100 group-hover:scale-103"
-                  priority={i === 0}
+                  priority
                 />
 
                 {/* Hover Overlay */}
