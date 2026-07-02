@@ -40,7 +40,7 @@ export default function FeaturedProject() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="group border border-white/10 bg-zinc-900"
+              className="group bg-background border border-white/10"
             >
               {/* IMAGE */}
               <div className="relative aspect-video overflow-hidden">
@@ -50,7 +50,7 @@ export default function FeaturedProject() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-100 group-hover:scale-103"
-                  loading="lazy"
+                  priority={i === 0}
                 />
 
                 {/* Hover Overlay */}
@@ -112,7 +112,7 @@ export default function FeaturedProject() {
               </div>
 
               {/* CONTENT */}
-              <div className="flex flex-col items-center justify-between gap-4 p-4 md:items-start">
+              <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 p-4 md:items-start">
                 {/* LEFT */}
                 <div>
                   <h3 className="text-center text-lg font-semibold md:text-start md:text-lg lg:text-xl">
